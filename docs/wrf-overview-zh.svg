@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600">
+  <defs>
+    <style>
+      .box { fill: #eef2ff; stroke: #6366f1; stroke-width: 1.5; }
+      .deck { fill: #fffbeb; stroke: #f59e0b; stroke-width: 1.5; }
+      .top-box { fill: #f0fdf4; stroke: #22c55e; stroke-width: 1.5; }
+      .top-title { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 16px; font-weight: 700; fill: #1f2937; text-anchor: middle; dominant-baseline: middle; }
+      .top-text { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 14px; font-weight: 500; fill: #374151; text-anchor: middle; dominant-baseline: middle; }
+      .deck-title { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 17px; font-weight: 700; fill: #92400e; text-anchor: middle; dominant-baseline: middle; }
+      .module-text { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 14px; font-weight: 600; fill: #374151; text-anchor: middle; dominant-baseline: middle; }
+      .module-sub { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 13px; fill: #4b5563; text-anchor: middle; dominant-baseline: middle; }
+      .arrow { stroke: #6b7280; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+      .label-text { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 13px; fill: #4b5563; text-anchor: start; dominant-baseline: middle; }
+      .tagline-text { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 16px; font-weight: 600; fill: #92400e; text-anchor: middle; dominant-baseline: middle; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280" />
+    </marker>
+  </defs>
+
+  <!-- New Project box -->
+  <rect x="100" y="20" width="350" height="130" rx="3" class="top-box" />
+  <text x="275" y="45" class="top-title">新建项目</text>
+  <text x="275" y="75" class="top-text">获取模板</text>
+  <text x="275" y="95" class="top-text">（空 .wrf.md 到本地）</text>
+  <text x="275" y="120" class="top-text">AI 写入项目计划</text>
+
+  <!-- Resumed Project box -->
+  <rect x="550" y="20" width="350" height="130" rx="3" class="top-box" />
+  <text x="725" y="45" class="top-title">恢复项目</text>
+  <text x="725" y="78" class="top-text">最近 / 历史项目</text>
+  <text x="725" y="108" class="top-text">暂停 / 恢复项目</text>
+
+  <!-- Arrows from top boxes to WRF Deck -->
+  <path d="M 275 150 L 275 185 L 500 185 L 500 200" class="arrow" fill="none" />
+  <text x="285" y="172" class="label-text">导入已填写的 .wrf.md</text>
+  <path d="M 725 150 L 725 185 L 500 185 L 500 200" class="arrow" fill="none" />
+  <text x="735" y="172" class="label-text">one-click handoff</text>
+
+  <!-- WRF Deck workstation -->
+  <rect x="20" y="200" width="960" height="380" rx="4" class="deck" />
+  <text x="500" y="228" class="deck-title">WRF Deck 集成可视工作站</text>
+
+  <!-- Internal module 1 -->
+  <rect x="60" y="260" width="140" height="260" rx="3" class="box" />
+  <text x="130" y="360" class="module-text">命令生成器</text>
+  <text x="130" y="390" class="module-sub">下一步 / 分支</text>
+  <text x="130" y="420" class="module-sub">/ 全量交接</text>
+
+  <!-- Internal module 2 -->
+  <rect x="225" y="260" width="140" height="260" rx="3" class="box" />
+  <text x="295" y="375" class="module-text">执行步骤</text>
+  <text x="295" y="405" class="module-sub">/ 计划</text>
+
+  <!-- Internal module 3 -->
+  <rect x="390" y="260" width="140" height="260" rx="3" class="box" />
+  <text x="460" y="360" class="module-text">状态机 +</text>
+  <text x="460" y="390" class="module-text">Sentry 护栏</text>
+  <text x="460" y="420" class="module-sub">流程 / 预警</text>
+
+  <!-- Internal module 4 -->
+  <rect x="555" y="260" width="140" height="260" rx="3" class="box" />
+  <text x="625" y="375" class="module-text">任务完成</text>
+  <text x="625" y="405" class="module-sub">/ 步骤完成</text>
+
+  <!-- Internal module 5 -->
+  <rect x="745" y="260" width="180" height="120" rx="3" class="box" />
+  <text x="835" y="300" class="module-text">导出 ZIP</text>
+  <text x="835" y="325" class="module-sub">human-AI</text>
+  <text x="835" y="350" class="module-sub">贡献</text>
+
+  <!-- Internal module 6 -->
+  <rect x="745" y="400" width="180" height="120" rx="3" class="box" />
+  <text x="835" y="440" class="module-text">Proof Trail</text>
+  <text x="835" y="465" class="module-sub">SHA-256 +</text>
+  <text x="835" y="490" class="module-sub">OpenTimestamps 存证</text>
+
+  <!-- Horizontal arrows between internal modules -->
+  <line x1="200" y1="390" x2="225" y2="390" class="arrow" />
+  <line x1="365" y1="390" x2="390" y2="390" class="arrow" />
+  <line x1="530" y1="390" x2="555" y2="390" class="arrow" />
+
+  <!-- Branch arrows from Task done to Export ZIP and Proof Trail -->
+  <line x1="695" y1="390" x2="745" y2="320" class="arrow" />
+  <line x1="695" y1="390" x2="745" y2="460" class="arrow" />
+
+  <text x="500" y="555" class="tagline-text">点击命令生成器 → 粘贴给 AI 工具 → WRF Deck 自动推进所有状态。</text>
+</svg>
