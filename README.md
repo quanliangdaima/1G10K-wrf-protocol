@@ -23,9 +23,10 @@ Reference implementation of the **open WRF protocol** — one file, **any AI too
 
 - **Dangerous commands.** Executing without warning, forcing you to manually capture evidence under stress.
 - **Pause-and-resume cost.** You cannot step away freely. Every meeting or break forces you to spend time and tokens rebuilding context.
-- **Tool-switching overhead.** Repeating goals, constraints, and progress every time you switch tools.
 - **Context drift.** Context window limits that cause drift, forgotten constraints, or confident hallucinations.
-- **State chaos.** Multiple AI tasks running at once, making continuous state hard to manage.
+- **Tool-switching overhead.** Repeating goals, constraints, and progress every time you switch tools.
+- **Multi-task switching cost.** Running multiple AI tasks at once makes continuous working state hard to manage.
+- **Team handoff overhead.** Handing off work requires detailed explanations; remote voice or email handoffs are awkward.
 - **Human-AI contributions blurred.** Human creative direction is scattered across chat histories, making it hard to extract, archive, and one-click generate a clear human-vs-AI contribution file.
 - **Missing proof.** The inability to instantly capture execution content and automatically generate a verifiable hash proof during normal work or incidents.
 
@@ -97,7 +98,7 @@ Most current agent guardrails rely on an external classifier that judges an enti
 
 ### Instant handoff
 
-Context moves instantly whenever the task changes hands: switching AI tools, pausing and resuming later, picking up a teammate's work, or returning to an older project. WRF Deck keeps the **full execution state** in your local `.wrf.md` file — step roadmap, active step, completed checkpoints with evidence, strategic notes, and next-step preview. Traditional plan files capture intent; `.wrf.md` captures **execution state**. Because it is a **single file**, any AI tool can pick up the task and continue exactly where things stopped, while WRF Deck gives you a **visual workspace** to monitor and steer without hand-editing the protocol.
+Whenever a task needs to hand off context, `.wrf.md` plus WRF Deck makes it instant: switching AI tools, pausing and resuming later, picking up a teammate's work, or returning to an older project. Your AI tools write the **full execution state** into `.wrf.md` step by step, following the step-level instructions — step roadmap, active step, completed checkpoints with evidence, strategic notes, and next-step preview. `.wrf.md` records **continuous execution state**. Because it is a **single file**, any AI tool can take over the task and continue exactly from the breakpoint; WRF Deck provides a **visual workspace** that displays the full execution state the moment you import the protocol, enabling immediate continuation and monitoring.
 
 Three ways to hand off:
 
@@ -128,6 +129,10 @@ Running multiple AI tools in parallel usually brings three problems:
 3. **Management and coordination become the bottleneck.** With each AI tool holding its own fragment of the state, you end up tracking who is working on what, sequencing commits, and keeping tasks from colliding. Past a few parallel tasks, that overhead becomes unmanageable.
 
 WRF Deck solves this by giving each task its own `.wrf.md` file — a single source of truth that records the full execution state: roadmap, active step, completed checkpoints with evidence, strategic notes, and next-step preview. Open one WRF Deck workspace per task. You can pause, switch tools, or continue tasks without losing the state of any single one, and visualize, inspect, and hand off any task instantly.
+
+### Team handoff
+
+In short, team members only need to hand off `.wrf.md`. Even a single email is enough — the recipient imports the file into WRF Deck and can take over immediately.
 
 ### Human contribution
 
